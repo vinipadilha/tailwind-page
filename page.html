@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/tailwind.css">
+</head>
+<body class="bg-gray-100 h-screen  dark:bg-gray-800">
+    <div class="container mx-auto px-4 py-8 space-y-8">
+        <div>
+            <h6 class="font-bold mb-2">Componente DropDown</h6>
+            <div class="relative">
+                <button class="flex items-center text-base px-3 py-1 rounded shadow border border-gray-300 bg-gray-50"
+                        onclick="toggleDropdown()">
+                    Links 
+                    <svg class="h-4 w-4 ml-2" 
+                        data-slot="icon" 
+                        fill="none" 
+                        stroke-width="1.5" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                      </svg>
+                
+                </button>
+
+                <div id="dropdownMenu" class="absolute bg-white border border-gray-300  py-1 shadow-md rounded-md" style="width: 200px;">
+                    <a class="block  text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100" href="">Link1</a>
+                    <a class="block  text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100" href="">Link2</a>
+                    <a class="block  text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100" href="">Link3</a>
+                    <a class="block  text-sm text-gray-500 px-3 py-1 bg-white hover:bg-gray-100" href="">Link4</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="p-4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati earum accusantium veniam, fuga quis placeat pariatur labore nobis repellendus quas, nostrum rerum in! Laborum eaque modi, dolor voluptate aspernatur adipisci?
+    </div>
+
+    <div class="mx-10 space-x-32 text-center border-2 border-black">
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+    </div>
+    
+    <div class=" w-1/2 sm:w-1/3 m-4 p-4 border-2 border-black rounded-2xl  bg-gradient-to-tr from-blue-500 to-purple-600">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet delectus unde distinctio facere obcaecati quaerat reiciendis! Incidunt fugiat voluptate ratione, molestias delectus illo accusamus! Laborum rerum voluptatibus neque ipsum dolorum?
+        <br>
+        <button class="bg-blue-400 px-4 py-2 rounded hover:ring ring-red-600 mt-2">Save</button>
+    </div>
+
+    <div class="m-10 p-2 border-l-2 border-red-600" >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet delectus unde distinctio facere obcaecati quaerat reiciendis! Incidunt fugiat voluptate ratione, molestias delectus illo accusamus! Laborum rerum voluptatibus neque ipsum dolorum?
+    </div>
+
+    <div class="p-4 grid grid-cols-3 gap-4 h-screen bg-blue-400 h-96">
+        <div class="hover:bg-yellow-400 p-4 bg-red-600 cursor-pointer rounded-xl"></div>
+        <div class="p-4 bg-yellow-600"></div>
+        <div class="p-4 bg-orange-600"></div>  
+        
+        <div class="p-4 bg-red-600"></div>
+        <div class="p-4 bg-yellow-600"></div>
+        <div class="p-4 bg-orange-600"></div>  
+
+        <div class="p-4 bg-red-600"></div>
+        <div class="p-4 bg-yellow-600"></div>
+        <div class="p-4 bg-orange-600"></div>  
+
+    </div>
+
+    <div class="container mx-auto px-60 py-8">
+        <div class=" bg-gray-200 shadow-md rounded">
+            <div class="p-4 font-bold border-b border-black">Topo</div>
+
+            <div class="p-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facere quia ad nemo distinctio exercitationem eius atque nobis enim et, omnis facilis asperiores, ipsum doloremque itaque repellendus harum corrupti reiciendis!</div>
+
+            <div class="p-4 border-t border-black"> Rodape</div>
+        </div>
+
+    </div>
+    
+    <div class="p-10 justify-center flex">
+        <button class="text-md bg-blue-500 px-4 py-2 rounded shadow hover:bg-blue-600 text-white">
+            Save
+        </button>
+    </div>
+
+    <div class="container p-10 justify-center flex w-1/3 mx-auto my-12 border border-black h-auto ">
+        <div class="space-y-4">
+            <input type="text"
+        placeholder="Digite seu nome"
+        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 rounded px-2 py-1 text-sm text-gray-900 focus:outline-none">
+
+        <input type="text"
+        placeholder="Digite seu email"
+        class="w-full text-md bg-gray-50 border border-gray-300 focus:border-blue-500 rounded px-2 py-1 text-sm text-gray-900 focus:outline-none transition duration-500 ease-in-out">
+
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.classList.toggle("hidden"); 
+        }
+    </script>
+
+</body>
+</html>
